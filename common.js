@@ -1,12 +1,39 @@
+//popup
 $(document).ready(function(){
-    //3초마다 이미지 이동
-    setInterval(function(){
-        $('.images ul').animate({
-            left: '-=' + 700 //3초마다 이미지 폭만큼 왼쪽으로 이동
-        },'slow',function(){
-            //움직임이 다 일어나고 나면 줄 명령을 작성
-            $('.images li').first().appendTo('.images ul');
-            $('.images ul').css('left',0);
-        });
-    },4000);
+    $('.popupopen').click(function(){
+        $('.popup').fadeIn(0);
+    });
+    
+    $('button').click(function(){
+        $('.popup').fadeOut(0);
+    });
 });
+
+//gnb
+$(document).ready(function(){
+    $('.mainnav').hover(function(){
+        $(this).find('+ .subnav').stop().slideDown('fast');
+        
+        $(this).parent().mouseleave(function(){
+            $(this).find('.subnav').stop().slideUp('fast');
+        });
+    });
+});
+
+
+//main
+$(document).ready(function(){
+    var num = 0;
+    
+    setInterval(function(){
+        
+        if(num<2){
+            num++;
+        }else{
+            num = 0;
+        }
+        $('.main li').fadeOut('slow');
+        $('.main li').eq(num).fadeIn('slow');
+    },2500);
+});
+
