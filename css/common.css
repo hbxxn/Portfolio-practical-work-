@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+/* base작업 */
+*{ 
+    padding: 0; margin: 0;
+    font-family: "맑은 고딕",sans-serif;
+    color: #333;
+    font-size: 14px;
+    box-sizing: border-box;
+} 
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{ 
+    display: block;
+    border: none;
+}
+
+/* popup */
+.popup{
+    display: none;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 100;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+.pwrap{
+    position: absolute; 
+    top: 150px;
+    left: 0; right: 0; margin: 0 auto;
+    width: 350px; height: 350px;
+    padding: 20px; border: 1px solid #666;
+    background-color: #fff;
+}
+.popup h2{
+    text-align: center; font-size: 20px;
+    margin-bottom: 10px;
+}
+.popup p{
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+button{
+    float: right;
+}
+
+/* header */
+.header{
+    position: relative;
+    width: 1200px; height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.header h1{
+    width: 200px; height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.gnb{
+    width: 600px; height: 40px;
+}
+.gnb > ul{
+    width: 100%; height: 100%;
+    display: flex;
+}
+.gnb > ul > li{
+    position: relative;
+    width: 150px; height: 40px;
+}
+.gnb .mainnav{
+    display: block;
+    width: 100%; height: 100%;
+    font-size: 18px; font-weight: bold;
+    text-align: center; line-height: 40px;
+}
+.gnb > ul > li:hover .mainnav{
+    background-color:  #3cb149; color: #fff;
+}
+.gnb .subnav{
+    display: none;
+    position: absolute;
+    left: 0; top: 40px;
+    z-index: 50;
+    width: 100%;
+}
+.gnb .subnav li{
+    width: 100%; height: 40px;
+}
+.gnb .subnav a{
+    display: block;
+    width: 100%; height: 100%;
+    color: #fff; text-align: center;
+    line-height: 40px;
+}
+.gnb .subnav a:hover{
+    background-color: #ededed; color: #333;
+}
+.gnbbg{
+    display: none;
+    position: absolute;
+    left: 0; top: 100px;
+    z-index: 40;
+    width: 100%; height: 120px;
+    background-color: #3cb149;
+}
+
+
+/* main */
+.main{
+    position: relative;
+    width: 1200px; height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.main ul{
+    position: absolute; 
+    left: 0; top: 0;
+    width: 3600px;
+    height: 300px;
+    display: flex;
+}
+
+/* contents */
+.contents{
+    width: 1200px; height: 200px;
+    margin: 0 auto;
+    display: flex;
+}
+.contents h2{
+    width: 100%; height: 50px;
+    border-bottom: 1px solid #333;
+    font-size: 20px; line-height: 49px;
+}
+.notice{
+    width: 400px; height: 200px;
+    padding: 10px;
+}
+.notice ul{
+    width: 100%; height: 130px;
+}
+.notice li{
+    width: 100%; height: 20%;
+    padding: 0 10px;
+    line-height: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+.notice .date{ color: #999; }
+.notice a{
+    width: 250px; height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gallery{
+    width: 400px; height: 200px;
+    padding: 10px;
+}
+.gallery ul{
+    width: 100%; height: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.banner{
+    width: 400px; height: 200px;
+}
+
+
+/* footer */
+.footer{
+    width: 1200px; height: 100px;
+    margin: 0 auto;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer h1{
+    width: 200px; height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    color: #ccc;
+}
+.familysite{
+    cursor: pointer; float: left; padding: 0 10px; 
+    width: 200px; height: 40px; line-height: 40px; text-align: left;  
+    border: 1px solid #999999; box-sizing: border-box;  margin-right: 25px; }
